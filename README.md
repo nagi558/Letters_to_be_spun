@@ -128,7 +128,6 @@ https://github.com/user-attachments/assets/8a90bcdb-2702-4066-8199-15002094394a
 | **Testing Library（React）** | ユーザー操作に近い形でコンポーネントをテストするため |
 | **RSpec** | Rails の標準的なテストフレームワーク。可読性の高いテストを書くため |
 | **factory_bot_rails / faker** | テストデータの生成を効率化するため |
-| **Brakeman** | Rails のセキュリティ脆弱性を静的解析するため |
 | **RuboCop（Rails / RSpec）** | コーディング規約を統一し、コード品質を保つため |
 | **letter_opener_web** | 開発環境でのメール送信内容をブラウザ上で確認するため |
 | **Postman** | API エンドポイントの動作確認に使用 |

@@ -15,7 +15,7 @@ module Api
         pair.generate_invitation_token!
 
         render json: {
-          invitation_url: "#{ENV.fetch('FRONTED_URL', nil)}/invite/##{pair.invitation_token}"
+          invitation_url: "#{ENV.fetch('FRONTEND_URL', nil)}/invite/##{pair.invitation_token}"
         }, status: :created
       end
 

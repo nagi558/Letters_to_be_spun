@@ -6,10 +6,10 @@ module Api
       def index
         category = current_user.categories.find(params[:category_id])
         posts = category.posts.order(created_at: :desc)
-        render json: posts.as_json(
-          only: %i[id title body created_at updated_at],
-          include: { category: { only: %i[id name] } }
-        ), status: :ok
+        render json: {
+          category: { id: category.id, name: category.name },
+          posts: posts.as_json(only: %i[id title body created_at updated_at])
+        }, status: :ok
       end
     end
   end

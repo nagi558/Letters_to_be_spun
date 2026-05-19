@@ -26,7 +26,7 @@ RSpec.describe 'Api::V1::Pairs', type: :request do
           get '/api/v1/pair', headers: headers
           expect(response).to have_http_status(:ok)
           expect(json['paired']).to be(true)
-          expect(json['partner_name']).to eq(partner.name)
+          expect(json['partner_name']).to eq(partner.nickname || partner.name)
         end
       end
     end
@@ -106,7 +106,7 @@ RSpec.describe 'Api::V1::Pairs', type: :request do
         it '200とパートナー名を返す' do
           get "/api/v1/pair/join/#{pair.invitation_token}", headers: headers
           expect(response).to have_http_status(:ok)
-          expect(json['partner_name']).to eq(partner.name)
+          expect(json['partner_name']).to eq(partner.nickname || partner.name)
         end
       end
 

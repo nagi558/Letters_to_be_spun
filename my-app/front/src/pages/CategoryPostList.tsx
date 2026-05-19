@@ -15,21 +15,12 @@ export const CategoryPostList = () => {
     const controller = new AbortController()
     const fetchCategoryPosts = async () => {
       try {
-        const categoryResponse = await axiosInstance.get(
-          `/api/v1/categories/${id}`,
-          {
-            signal: controller.signal,
-          },
-        )
-        setCategory(categoryResponse.data)
-
-        const postsResponse = await axiosInstance.get(
+        const response = await axiosInstance.get(
           `/api/v1/categories/${id}/posts`,
-          {
-            signal: controller.signal,
-          },
+          { signal: controller.signal },
         )
-        setPosts(postsResponse.data)
+        setCategory(response.data.category)
+        setPosts(response.data.posts)
       } catch (e) {
         if (axios.isCancel(e)) return
         console.error(e)
@@ -75,7 +66,7 @@ export const CategoryPostList = () => {
                         {post.title}
                       </p>
                       <span className="text-xs text-white bg-[#A0B9C6] px-2 py-1 rounded-full">
-                        {post.category.name}
+                        {category?.name}
                       </span>
                     </div>
                     <p className="text-gray-500 text-sm text-left">

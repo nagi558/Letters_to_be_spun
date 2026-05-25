@@ -163,7 +163,7 @@ cd backend
 bundle install
 ```
 
-`.env` を開き、各値を設定してください。
+`.env` を開き、各値を設定
 
 ```bash
 DEVISE_JWT_SECRET_KEY=
@@ -185,7 +185,7 @@ cd frontend
 npm install
 ```
 
-`.env` を開き、各値を設定してください。
+`.env` を開き、各値を設定
 
 ```bash
 VITE_GOOGLE_CLIENT_ID=

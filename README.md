@@ -210,4 +210,4 @@ npm run dev
 | | |
 |---|---|
 | **GitHub** | https://github.com/nagi558/Letters_to_be_spun |
-| **ポートフォリオ** | https://tsumuguletters.com/ |
+| **URL** | https://tsumuguletters.com/ |
